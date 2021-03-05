@@ -20,5 +20,6 @@ function getMovies() {
 }
 
 $("#submit-btn").on("click", function() {
+    console.log("yayaya");
     getMovies();
 });
