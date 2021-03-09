@@ -15,25 +15,29 @@ function getMovies() {
         return response.json();
     })
     .then(function(movies) {
-        // console.log(search);
+        console.log(movies.Search);
         displayMovies(movies);
     })
 }
 
 var displayMovies = function(movies) {
     // check to see if search array is empty
-    if (movies.length === 0) {
+    if (movies.Search.length === 0) {
         $("#results-container").text("No Movies");
         return
     }
-
-    console.log(movies.Search[0]);
-
+    else {
     // loop through movie results to display top 10
-    // for (var i = 0; i < movies.length; i++) {
-    //     var movieEl = document.createElement("div")
-    //     movieEl.addClass()
-    // }
+        for (var i = 0; i < movies.Search.length; i++) {
+            $("#results-list").append(
+                `<li>${movies.Search[i].Title}</li>`
+            )
+            console.log(movies.Search[i]);
+        }
+    }
+    
+
+
 
 
     
