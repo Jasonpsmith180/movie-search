@@ -4,6 +4,35 @@
     height: 185px !important;
 
 body {
+
+    background: url("../images/movie.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+.form-button {
+    background-color: rgb(211, 109, 91);
+    border: 6px dotted rgb(156, 48, 48);
+    
+}
+
+
+.row {
+    
+    text-align: center;
+    font-family:fantasy;
+}
+
+#page-heading {
+    border: 10px dotted gold;
+    background: rgb(255, 255, 255);
+}
+.card-content {
+    background:rgba(145, 187, 235, 0) ;
+}
+
     background: url("https://images.unsplash.com/photo-1440404653325-ab127d49abc1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80");
 
 }
+
