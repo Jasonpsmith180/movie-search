@@ -6,6 +6,7 @@ function getMovies() {
         .val()
         .trim()
         .toLowerCase();
+        console.log(title);
 
     fetch("http://www.omdbapi.com/?apikey=" + APIkey + "&s=" + title)
 
@@ -13,6 +14,7 @@ function getMovies() {
         return response.json();
     })
     .then(function(movies) {
+        console.log(movies.Search);
         displayMovies(movies);
     })
 }
@@ -26,6 +28,7 @@ var displayMovies = function(movies) {
     else {
     // loop through movie results to display top 10
         for (var i = 0; i < movies.Search.length; i++) {
+
 
         // fetch function to get the plot from the title
         fetch("http://www.omdbapi.com/?apikey=" + APIkey + "&t=" + movies.Search[i].Title + "&type=movie&plot")
@@ -57,7 +60,6 @@ var displayMovies = function(movies) {
             })
         }
     }
-    
 }
 
 $("#submit-btn").on("click", function() {
