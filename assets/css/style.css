@@ -1,14 +1,20 @@
 
-.search-poster {
-    width: 125px !important;
-    height: 185px !important;
-}
-
 body {
     background: url("../images/movie.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
+}
+
+#page-heading {
+    border: 10px dotted gold;
+    background: rgb(246, 0, 0);
+    border-radius: 10px;
+}
+
+.card-content  {
+    background:rgba(145, 187, 235, 0) ;
+    border: 10px ridge red;
 }
 
 .form-button {
@@ -24,6 +30,16 @@ body {
     font-family:fantasy;
 }
 
+
+
+
+
+.search-poster {
+    width: 125px !important;
+    height: 185px !important;
+}
+
+
 #page-heading {
     border: 10px dotted gold;
     background: rgb(255, 255, 255);
@@ -31,3 +47,4 @@ body {
 .card-content {
     background:rgba(145, 187, 235, 0) ;
 }
+
