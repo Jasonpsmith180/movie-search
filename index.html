@@ -55,9 +55,9 @@
                   </div>
                   <div class="form-group">
                     <label for="director-search"></label>
-                    <input type="text" name="director-search-box" id="director-search" aria-describedby="authorHelp"
+                    <input type="text" name="director-search-box" id="director-search" aria-describedby="directorHelp"
                       placeholder="Action/Cop">
-                    <small class="helper-text" id="authorHelp"></small>
+                    <small class="helper-text" id="directorHelp"></small>
                   </div>
 
                   <button type="submit" class="form-button" id="submit-btn">Search</button>
@@ -74,11 +74,18 @@
               <div class="card-content">
                 <span class="card-title">Movies</span>
 
+
               </div>
             </div>
           </div>
         </div>
       </div>
+
+                <div id="results-container">
+                  <ul id="results-list">
+
+                  </ul>
+
 
         <div class="row">
           <div class="col l12">
@@ -96,6 +103,10 @@
     </main>
     <footer>
 
+
+
+
+
   </div>
   </div>
   </div>
@@ -103,19 +114,15 @@
   </div>
   </div>
   </footer>
-  </div> <!-- ===FIREBASE SCRIPTS=== -->
+  </div>
 
-  <!-- jquery Might need to READD THIS  -->
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
   <!-- app -->
   <script src="./assets/js/script.js"></script>
 
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
 </body>
 
 </html>
