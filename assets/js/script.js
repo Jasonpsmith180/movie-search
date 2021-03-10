@@ -6,11 +6,7 @@ function getMovies() {
         .val()
         .trim()
         .toLowerCase();
-
-
-
         console.log(title);
-
 
     fetch("http://www.omdbapi.com/?apikey=" + APIkey + "&s=" + title)
 
@@ -18,10 +14,7 @@ function getMovies() {
         return response.json();
     })
     .then(function(movies) {
-
-
         console.log(movies.Search);
-
         displayMovies(movies);
     })
 }
@@ -67,20 +60,6 @@ var displayMovies = function(movies) {
             })
         }
     }
-
-            $("#results-list").append(
-                `<li>${movies.Search[i].Title}</li>`
-            )
-            console.log(movies.Search[i]);
-        }
-    }
-    
-
-
-
-
-
-    
 }
 
 $("#submit-btn").on("click", function() {
