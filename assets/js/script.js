@@ -1,6 +1,8 @@
 var APIkey = "9cae5d37"
 
-function getMovies() {
+function getMovies(e) {
+    e.preventDefault();
+    $("#results-container").text("");
 
     var title = $("#title-search")
         .val()
@@ -29,14 +31,10 @@ var displayMovies = function(movies) {
     // loop through movie results to display top 10
         for (var i = 0; i < movies.Search.length; i++) {
 
-
         // fetch function to get the plot from the title
         fetch("http://www.omdbapi.com/?apikey=" + APIkey + "&t=" + movies.Search[i].Title + "&type=movie&plot")
 
         .then(function(response) {
-            if (response.ok) {
-                
-            }
             return response.json();
             })
             .then(function(movie) {
@@ -62,6 +60,10 @@ var displayMovies = function(movies) {
     }
 }
 
-$("#submit-btn").on("click", function() {
-    getMovies();
+$("#submit-btn").on("click", function(e) {
+    getMovies(e);
 });
+
+$("#reset-btn").on("click", function() {
+    $("#results-container").text("");
+})
