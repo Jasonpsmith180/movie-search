@@ -48,3 +48,8 @@ body {
     background:rgba(145, 187, 235, 0) ;
 }
 
+iframe {
+    width: 450px;
+    height: 250px;
+}
+
