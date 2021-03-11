@@ -42,18 +42,20 @@ var displayMovies = function(movies) {
 
                 // display movies
                 $("#results-container").append(
-                    `<div class="card horizontal">\
-                        <div class="card-image">\
-                            <img class="search-poster" src="${movie.Poster}">\
-                        </div>\
-                        <div class="card-stacked">\
-                            <div class="card-content">\
-                                <h5>${movie.Title}</h5>\
-                                <p>${movie.Year}</p>\
-                                <p>${movie.Plot}</p>\
+                    `<a href = "./imdb.html?movie=${movie.Title}"\
+                        <div class="card horizontal">\
+                            <div class="card-image">\
+                                <img class="search-poster" src="${movie.Poster}">\
+                            </div>\
+                            <div class="card-stacked">\
+                                <div class="card-content">\
+                                    <h5>${movie.Title}</h5>\
+                                    <p>${movie.Year}</p>\
+                                    <p>${movie.Plot}</p>\
+                                </div>\
                             </div>\
                         </div>\
-                    </div>`
+                    </a>`
                 )
             })
         }
