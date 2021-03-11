@@ -10,11 +10,13 @@ body {
     border: 10px dotted gold;
     background: rgb(246, 0, 0);
     border-radius: 10px;
+    box-shadow: 0 0 50px rgb(255, 217, 0);
 }
 
 .card-content  {
     background:rgba(145, 187, 235, 0) ;
     border: 10px ridge red;
+    
 }
 
 .form-button {
@@ -22,6 +24,7 @@ body {
     border: 6px dotted rgb(156, 48, 48);
     
 }
+
 
 
 .row {
