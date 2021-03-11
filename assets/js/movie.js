@@ -4,7 +4,7 @@ function getVideo() {
         url: 'https://www.googleapis.com/youtube/v3/search',
         data: {
             key: 'AIzaSyCe5XVTMu5oYI0XgZ9-7l2AIFim_OX8tFM',
-            q: "brick trailer",
+            q: "star wars trailer",
             part: 'snippet',
             maxResults: 1,
             type: 'video',
