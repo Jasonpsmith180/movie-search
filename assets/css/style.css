@@ -40,14 +40,6 @@ body {
 }
 
 
-#page-heading {
-    border: 10px dotted gold;
-    background: rgb(255, 255, 255);
-}
-.card-content {
-    background:rgba(145, 187, 235, 0) ;
-}
-
 iframe {
     width: 450px;
     height: 250px;
@@ -60,6 +52,3 @@ iframe {
     height: 185px !important;
 }
 
-#titleHelp {
-    text-align:start;
-}
