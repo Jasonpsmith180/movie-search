@@ -1,3 +1,4 @@
+var omdbAPIkey = "key here"
 
 function getMovieName() {
     // extract movie name from query string
@@ -16,7 +17,7 @@ function getVideo(movieTitle) {
         type: 'GET',
         url: 'https://www.googleapis.com/youtube/v3/search',
         data: {
-            key: 'AIzaSyCe5XVTMu5oYI0XgZ9-7l2AIFim_OX8tFM',
+            key: 'key here',
             q: `${movieTitle} trailer`,
 
             part: 'snippet',
@@ -38,6 +39,17 @@ function embedVideo(data) {
     $("h3").text(data.items[0].snippet.title)
     $(".description").text(data.items[0].snippet.description)
 }
+
+// fetch function to get the plot from the title
+fetch("http://www.omdbapi.com/?apikey=" + APIkey + "&t=" + movies.Search[i].Title + "&type=movie&plot")
+
+.then(function(response) {
+    return response.json();
+    })
+    .then(function(movie) {
+        console.log(movie);
+    })
+
 
 getMovieName();
 
