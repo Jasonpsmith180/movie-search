@@ -1,6 +1,8 @@
-var APIkey = "9cae5d37"
+var APIkey = "key here"
 
-function getMovies() {
+function getMovies(e) {
+    e.preventDefault();
+    $("#results-container").text("");
 
     var title = $("#title-search")
         .val()
@@ -29,14 +31,10 @@ var displayMovies = function(movies) {
     // loop through movie results to display top 10
         for (var i = 0; i < movies.Search.length; i++) {
 
-
         // fetch function to get the plot from the title
         fetch("http://www.omdbapi.com/?apikey=" + APIkey + "&t=" + movies.Search[i].Title + "&type=movie&plot")
 
         .then(function(response) {
-            if (response.ok) {
-                
-            }
             return response.json();
             })
             .then(function(movie) {
@@ -44,24 +42,30 @@ var displayMovies = function(movies) {
 
                 // display movies
                 $("#results-container").append(
-                    `<div class="card horizontal">\
-                        <div class="card-image">\
-                            <img class="search-poster" src="${movie.Poster}">\
-                        </div>\
-                        <div class="card-stacked">\
-                            <div class="card-content">\
-                                <h5>${movie.Title}</h5>\
-                                <p>${movie.Year}</p>\
-                                <p>${movie.Plot}</p>\
+                    `<a href = "./imdb.html?movie=${movie.Title}"\
+                        <div class="card horizontal">\
+                            <div class="card-image">\
+                                <img class="search-poster" src="${movie.Poster}">\
+                            </div>\
+                            <div class="card-stacked">\
+                                <div class="card-content">\
+                                    <h5>${movie.Title}</h5>\
+                                    <p>${movie.Year}</p>\
+                                    <p>${movie.Plot}</p>\
+                                </div>\
                             </div>\
                         </div>\
-                    </div>`
+                    </a>`
                 )
             })
         }
     }
 }
 
-$("#submit-btn").on("click", function() {
-    getMovies();
+$("#submit-btn").on("click", function(e) {
+    getMovies(e);
 });
+
+$("#reset-btn").on("click", function() {
+    $("#results-container").text("");
+})
