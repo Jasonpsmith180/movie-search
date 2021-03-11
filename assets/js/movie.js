@@ -1,10 +1,25 @@
-function getVideo() {
+
+function getMovieName() {
+    // extract movie name from query string
+    var queryString = document.location.search;
+
+    // use split to get the movie title from the string
+    var movieString = queryString.split("=")[1];
+    var movieTitle = movieString.replaceAll("%20", " ");
+    console.log(movieTitle);
+    getVideo(movieTitle);
+}
+
+function getVideo(movieTitle) {
+
     $.ajax({
         type: 'GET',
         url: 'https://www.googleapis.com/youtube/v3/search',
         data: {
             key: 'key here',
-            q: "brick trailer",
+
+            q: `${movieTitle} trailer`,
+
             part: 'snippet',
             maxResults: 1,
             type: 'video',
@@ -25,4 +40,6 @@ function embedVideo(data) {
     $(".description").text(data.items[0].snippet.description)
 }
 
-getVideo();
+
+getMovieName();
+
