@@ -14,7 +14,7 @@ function getVideo(movieTitle) {
         type: 'GET',
         url: 'https://www.googleapis.com/youtube/v3/search',
         data: {
-            key: 'key here',
+            key: 'AIzaSyCe5XVTMu5oYI0XgZ9-7l2AIFim_OX8tFM',
             q: `${movieTitle} trailer`,
             part: 'snippet',
             maxResults: 1,
