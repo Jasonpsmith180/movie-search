@@ -1,5 +1,5 @@
-var APIkey = "9cae5d37"
-var searchedMovies = [];
+var omdbAPIkey = "9cae5d37"
+var recentTrailers = [];
 
 function getMovies(e) {
     e.preventDefault();
@@ -10,7 +10,7 @@ function getMovies(e) {
         .trim()
         .toLowerCase();
 
-    fetch("http://www.omdbapi.com/?apikey=" + APIkey + "&s=" + title)
+    fetch("http://www.omdbapi.com/?apikey=" + omdbAPIkey + "&s=" + title)
 
     .then(function(response) {
         return response.json();
@@ -25,7 +25,7 @@ var displayMovies = function(movies) {
     for (var i = 0; i < movies.Search.length; i++) {
 
         // fetch function to get the plot from the title
-        fetch("http://www.omdbapi.com/?apikey=" + APIkey + "&t=" + movies.Search[i].Title + "&type=movie&plot")
+        fetch("http://www.omdbapi.com/?apikey=" + omdbAPIkey + "&t=" + movies.Search[i].Title + "&type=movie&plot")
 
         .then(function(response) {
             // Check if the response is good
@@ -45,8 +45,7 @@ var displayMovies = function(movies) {
                                     </div>\
                                     <div class="card-stacked">\
                                         <div class="card-content">\
-                                            <h5>${movie.Title}</h5>\
-                                            <p>${movie.Year}</p>\
+                                            <h5>${movie.Title} (${movie.Year})</h5>\
                                             <p>${movie.Plot}</p>\
                                         </div>\
                                     </div>\
@@ -71,10 +70,4 @@ $("#reset-btn").on("click", function() {
     $("#results-container").text("");
 })
 
-$(".horizontal-card").on("click", function() {
-    searchedMovies.push(movie.Title);
-    console.log(movie.title);
-    localStorage.setItem("searchedMovies", JSON.stringify(searchedMovies));
-    console.log(searchedMovies);
-})
 

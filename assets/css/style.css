@@ -14,6 +14,11 @@ body {
 
 }
 
+.row {
+    text-align: center;
+    font-family:fantasy;
+}
+
 .card-content  {
     background:rgba(145, 187, 235, 0) ;
     border: 10px ridge red;
@@ -25,10 +30,16 @@ body {
     
 }
 
-.row {
-    
+.card-title {
     text-align: center;
-    font-family:fantasy;
+}
+
+.card-stacked {
+    text-align: left;
+}
+
+#movie-info {
+    padding: 5px;
 }
 
 .search-poster {
