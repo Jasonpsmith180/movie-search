@@ -1,5 +1,5 @@
-var ytAPIkey = "AIzaSyCe5XVTMu5oYI0XgZ9-7l2AIFim_OX8tFM"
-var omdbAPIkey = "9cae5d37"
+var ytAPIkey = "API Key Here"
+var omdbAPIkey = "API Key Here"
 
 function getMovieName() {
     // extract movie name from query string

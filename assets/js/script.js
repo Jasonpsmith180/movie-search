@@ -1,4 +1,4 @@
-var omdbAPIkey = "9cae5d37"
+var omdbAPIkey = "API Key Here"
 var recentTrailers = [];
 
 function getMovies(e) {
