@@ -25,31 +25,18 @@ body {
     
 }
 
-
-
 .row {
     
     text-align: center;
     font-family:fantasy;
 }
 
-
 .search-poster {
     width: 125px !important;
     height: 185px !important;
 }
-
-
 
 iframe {
     width: 850px;
     height: 480px;
 }
-
-
-
-.search-poster {
-    width: 125px !important;
-    height: 185px !important;
-}
-
