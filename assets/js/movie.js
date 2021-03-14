@@ -1,5 +1,6 @@
-var ytAPIkey = "API Key Here"
-var omdbAPIkey = "API Key Here"
+var ytAPIkey = "AIzaSyCe5XVTMu5oYI0XgZ9-7l2AIFim_OX8tFM"
+var omdbAPIkey = "9cae5d37"
+var recentlyViewed = JSON.parse(localStorage.getItem("recentlyViewed"));
 
 function getMovieName() {
     // extract movie name from query string
@@ -10,6 +11,14 @@ function getMovieName() {
     var movieTitle = movieString.replaceAll("%20", " ");
     displayInfo(movieTitle);
     getTrailer(movieTitle);
+
+    if (!recentlyViewed) {
+        recentlyViewed = [];
+    }
+
+    recentlyViewed.push(movieTitle);
+    localStorage.setItem("recentlyViewed", JSON.stringify(recentlyViewed));
+    console.log(recentlyViewed);
 }
 
 function displayInfo(movieTitle) {
