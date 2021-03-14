@@ -1,5 +1,4 @@
-var omdbAPIkey = "9cae5d37"
-var recentTrailers = [];
+var omdbAPIkey = "APIkeyHere"
 var recentlyViewed = JSON.parse(localStorage.getItem("recentlyViewed"));
 
 $(document).ready(function() {
