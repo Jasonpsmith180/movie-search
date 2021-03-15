@@ -1,5 +1,5 @@
-var ytAPIkey = "APIkeyHere"
-var omdbAPIkey = "APIkeyHere"
+var ytAPIkey = "AIzaSyCe5XVTMu5oYI0XgZ9-7l2AIFim_OX8tFM"
+var omdbAPIkey = "9cae5d37"
 var recentlyViewed = JSON.parse(localStorage.getItem("recentlyViewed"));
 
 function getMovieName() {
