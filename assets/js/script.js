@@ -1,5 +1,17 @@
-var omdbAPIkey = "API Key Here"
-var recentTrailers = [];
+var omdbAPIkey = "APIkeyHere"
+var recentlyViewed = JSON.parse(localStorage.getItem("recentlyViewed"));
+
+$(document).ready(function() {
+    if (!recentlyViewed) {
+        recentlyViewed = [];
+    }
+    console.log(recentlyViewed);
+    for (var i = 0; i < recentlyViewed.length; i++) {
+        $("#search-history").append(
+            `<li><a href = "./imdb.html?movie=${recentlyViewed[i]}">${recentlyViewed[i]}</a></li>`
+        );
+    }
+})
 
 function getMovies(e) {
     e.preventDefault();
@@ -70,4 +82,7 @@ $("#reset-btn").on("click", function() {
     $("#results-container").text("");
 })
 
-
+$("#clear-history").on("click", function() {
+    localStorage.clear();
+    location.reload();
+})
