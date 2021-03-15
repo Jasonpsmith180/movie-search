@@ -23,7 +23,7 @@ function getMovieName() {
 
 function displayInfo(movieTitle) {
     // fetch function to get the plot from the title
-    fetch("http://www.omdbapi.com/?apikey=" + omdbAPIkey + "&t=" + movieTitle + "&type=movie&plot=full")
+    fetch("https://www.omdbapi.com/?apikey=" + omdbAPIkey + "&t=" + movieTitle + "&type=movie&plot=full")
 
     .then(function(response) {
         return response.json();

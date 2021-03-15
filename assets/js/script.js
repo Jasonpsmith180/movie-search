@@ -22,7 +22,7 @@ function getMovies(e) {
         .trim()
         .toLowerCase();
 
-    fetch("http://www.omdbapi.com/?apikey=" + omdbAPIkey + "&s=" + title)
+    fetch("https://www.omdbapi.com/?apikey=" + omdbAPIkey + "&s=" + title)
 
     .then(function(response) {
         return response.json();
@@ -37,7 +37,7 @@ var displayMovies = function(movies) {
     for (var i = 0; i < movies.Search.length; i++) {
 
         // fetch function to get the plot from the title
-        fetch("http://www.omdbapi.com/?apikey=" + omdbAPIkey + "&t=" + movies.Search[i].Title + "&type=movie&plot")
+        fetch("https://www.omdbapi.com/?apikey=" + omdbAPIkey + "&t=" + movies.Search[i].Title + "&type=movie&plot")
 
         .then(function(response) {
             // Check if the response is good
